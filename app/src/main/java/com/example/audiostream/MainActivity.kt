@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
 import androidx.lifecycle.lifecycleScope
-import com.example.audiostream.ui.theme.App.drawLogs
+import com.example.audiostream.App.drawLogs
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

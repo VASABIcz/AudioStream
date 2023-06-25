@@ -1,4 +1,4 @@
-package com.example.audiostream.ui.theme
+package com.example.audiostream
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,6 +14,7 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.example.audiostream.ui.theme.AudioStreamTheme
 
 object App {
     val logs = mutableStateListOf<String>()

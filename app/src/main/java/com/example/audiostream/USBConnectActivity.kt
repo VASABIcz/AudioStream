@@ -1,26 +1,19 @@
 package com.example.audiostream
 
-import android.R.attr.track
-import android.app.Activity
 import android.content.Context
 import android.hardware.usb.UsbAccessory
 import android.hardware.usb.UsbManager
 import android.media.AudioFormat
 import android.media.AudioTrack
-import android.media.MediaPlayer
 import android.os.Build
-import android.os.Bundle
 import android.os.ParcelFileDescriptor
-import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
-import com.example.audiostream.ui.theme.App.drawLogs
-import com.example.audiostream.ui.theme.App.logs
+import com.example.audiostream.App.drawLogs
+import com.example.audiostream.App.logs
 import java.io.FileInputStream
 import java.io.FileOutputStream
-import java.lang.RuntimeException
-import java.lang.Thread.sleep
 import kotlin.concurrent.thread
 
 
@@ -50,7 +43,7 @@ class USBConnectActivity: ComponentActivity() {
             drawLogs()
         }
 
-        val accessory = intent.getParcelableExtra<UsbAccessory>(UsbManager.EXTRA_ACCESSORY)
+        val accessory = intent.getParc elableExtra<UsbAccessory>(UsbManager.EXTRA_ACCESSORY)
         logs.add("connected to USB host $accessory")
 
         fileDescriptor = usbManager.openAccessory(accessory)
